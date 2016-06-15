@@ -1,0 +1,12 @@
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\bin\Debug\HttpWatchTest.exe.config
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\bin\Debug\HttpWatchTest.exe
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\bin\Debug\HttpWatchTest.pdb
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.csprojResolveAssemblyReference.cache
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\Interop.HttpWatch.dll
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\Interop.SHDocVw.dll
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.csproj.ResolveComReference.cache
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.Form1.resources
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.Properties.Resources.resources
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.csproj.GenerateResource.Cache
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.exe
+D:\Code\LoginDemo\HttpWatchTest\HttpWatchTest\obj\Debug\HttpWatchTest.pdb

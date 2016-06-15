@@ -1,0 +1,9 @@
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\bin\Debug\重庆工商大学教务系统登录.exe.config
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\bin\Debug\重庆工商大学教务系统登录.exe
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\bin\Debug\重庆工商大学教务系统登录.pdb
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.csprojResolveAssemblyReference.cache
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.Form1.resources
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.Properties.Resources.resources
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.csproj.GenerateResource.Cache
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.exe
+D:\Code\LoginDemo\重庆工商大学教务系统登录\重庆工商大学教务系统登录\obj\Debug\重庆工商大学教务系统登录.pdb

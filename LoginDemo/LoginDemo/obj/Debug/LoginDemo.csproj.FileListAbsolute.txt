@@ -1,0 +1,9 @@
+D:\Code\LoginDemo\LoginDemo\LoginDemo\bin\Debug\LoginDemo.exe.config
+D:\Code\LoginDemo\LoginDemo\LoginDemo\bin\Debug\LoginDemo.exe
+D:\Code\LoginDemo\LoginDemo\LoginDemo\bin\Debug\LoginDemo.pdb
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.csprojResolveAssemblyReference.cache
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.Form1.resources
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.Properties.Resources.resources
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.csproj.GenerateResource.Cache
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.exe
+D:\Code\LoginDemo\LoginDemo\LoginDemo\obj\Debug\LoginDemo.pdb
