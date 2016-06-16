@@ -1,0 +1,9 @@
+D:\Code\LoginDemo\EncodeTest\EncodeTest\bin\Debug\EncodeTest.exe.config
+D:\Code\LoginDemo\EncodeTest\EncodeTest\bin\Debug\EncodeTest.exe
+D:\Code\LoginDemo\EncodeTest\EncodeTest\bin\Debug\EncodeTest.pdb
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.csprojResolveAssemblyReference.cache
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.Form1.resources
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.Properties.Resources.resources
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.csproj.GenerateResource.Cache
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.exe
+D:\Code\LoginDemo\EncodeTest\EncodeTest\obj\Debug\EncodeTest.pdb

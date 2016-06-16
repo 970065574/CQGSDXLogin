@@ -44,13 +44,19 @@ namespace 重庆工商大学教务系统登录
                 Refreshimg();
                 return;
             }
-            result = viser.Login();
-            textBox_html.Text = result.Html;
+            if(viser.LoginState)
+            {
+                viser.LodMainPage();
+                this.Text = viser.StdName;
+                MessageBox.Show("欢迎您，" + viser.StdName);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {           
             viser = new Visitor();
+            HttpResult Result = new HttpResult();
+            Result = viser.Go2FirstPage();
             Refreshimg();
         }
 
@@ -59,9 +65,7 @@ namespace 重庆工商大学教务系统登录
             pictureBox_Code.Image = viser.RefreshImage();
         }
         private void Refreshimg()
-        {
-            HttpResult Result = new HttpResult();
-            Result = viser.Go2FirstPage();
+        {         
             pictureBox_Code.Image = viser.GetImg();
         }
     }

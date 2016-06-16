@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using System.Web;
 namespace 重庆工商大学教务系统登录
 {
     class Visitor
@@ -17,15 +17,22 @@ namespace 重庆工商大学教务系统登录
         private string cookieStore;
         private string imageCode;
         private bool loginState;
+        private string stdName;
         public Visitor()
         {
             cookieStore = string.Empty;
+            stdName = string.Empty;
         }
         public Visitor(string std,string pwd)
         {
             id = std;
             psd = pwd;
+            stdName = string.Empty;
             cookieStore = string.Empty;
+        }
+        public string StdName
+        {
+            get { return stdName; }
         }
         public bool LoginState
         {
@@ -95,7 +102,8 @@ namespace 重庆工商大学教务系统登录
         }
         public HttpResult Login()
         {
-            psd = GetStringfromSymbol(psd);
+            psd = HttpUtility.UrlEncode(psd);
+            string pstData = "__VIEWSTATE=" + value + "&txtUserName=" + id + "&TextBox2=" + psd + "&txtSecretCode=" + imageCode + "&RadioButtonList1=%D1%A7%C9%FA&Button1=&lbLanguage=";
             HttpHelper helper = new HttpHelper();
             HttpResult result = new HttpResult();
             HttpItem item = new HttpItem()
@@ -105,21 +113,31 @@ namespace 重庆工商大学教务系统登录
                 Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
                 KeepAlive = true,
                 Cookie = cookieStore,
-                Postdata= "__VIEWSTATE="+value+ "&txtUserName="+id+ "&TextBox2="+psd+ "&txtSecretCode="+imageCode+ "&RadioButtonList1=%D1%A7%C9%FA&Button1=&lbLanguage=",
+                Postdata= pstData,
                 Referer = "http://jwsys.ctbu.edu.cn/",
                 UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0",
                 ContentType = "application/x-www-form-urlencoded",
-            };           
+                
+            };
+            //item.Header.Add("host", "jwsys.ctbu.edu.cn");        
             result = helper.GetHtml(item);
+            loginState = true;
             if (result.Html.Contains("alert('验证码不正确！！')"))
             {
-                //throw new Exception("验证码不正确！！！");
+                loginState = false;
+                throw new Exception("验证码不正确！！！");               
+            }
+            else if(result.Html.Contains("alert('密码错误！！')"))
+            {
+                loginState = false;
+                throw new Exception("密码不正确！！！");
+            }
+            else if(result.Html.Contains("<title>Base-64 字符数组的无效长度。</title>"))
+            {
+                loginState = false;
+                throw new Exception("学号位数或者密码不正确！！！");
             }
             return result;
-        }
-        private string GetStringfromSymbol(string s)
-        {
-            return  System.Uri.EscapeDataString(s);
         }
         public Image RefreshImage()
         {
@@ -137,6 +155,26 @@ namespace 重庆工商大学教务系统登录
             };
             result = helper.GetHtml(item);
             return byteArrayToImage(result.ResultByte);
+        }
+        public void LodMainPage()
+        {
+            HttpHelper helper = new HttpHelper();
+            HttpResult result = new HttpResult();
+            HttpItem item = new HttpItem()
+            {
+                URL = "http://jwsys.ctbu.edu.cn/xs_main.aspx?xh=" + id,
+                Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                KeepAlive = true,
+                Referer = "http://jwsys.ctbu.edu.cn/",
+                UserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:35.0) Gecko/20100101 Firefox/35.0",
+                Cookie = cookieStore,
+            };
+            result = helper.GetHtml(item);
+            string s = result.Html;
+            string pattern = "<span id=\"xhxm\">\\S+";
+            Match match = Regex.Match(s, pattern);
+            stdName = match.ToString().Replace("<span id=\"xhxm\">", "");
+            stdName = stdName.Replace("</span></em>", "");
         }
     }
 }
